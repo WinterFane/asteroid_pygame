@@ -8,7 +8,7 @@ class Bullet (CircleShape):
         self.velocity = pygame.Vector2(0, 1).rotate(player_rotation) * PLAYER_SHOOT_SPEED
     
     def draw(self, screen):
-        pygame.draw.circle(screen,"green",self.position,self.radius,2)
+        pygame.draw.circle(screen,BASIC_WEAPON_COLOR,self.position,self.radius,2)
 
     def update(self, delta_time):
         self.position += (self.velocity * delta_time)
